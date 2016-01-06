@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "still.css" %}" />
 <body>
+<table>
+<thead>
+<th>Student Name</th>
+<th>Taken Courses</th>
+</thead>
+  {% for st in student %}
+<tr>
 
 
-{% for st in student %}
-    Student:
-    <li>{{ st }}</li>
-    Courses:
-    {% for c in st.course.all %}
-    <li>{{ c }}</li>
-    {% endfor %}
-{% endfor %}
+   <td>{{ st }}</td>
+
+
+    <td>{% for c in st.course.all %}<li>{{ c.course_name }}</li> {% endfor %}</td>
+
+
+</tr>{% endfor %}
+
+</table>
+
 
 
 

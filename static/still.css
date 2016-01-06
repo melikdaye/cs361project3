@@ -1,0 +1,20 @@
+input {
+    border-radius: 200px;
+    border-width: 5px;
+    border-color: black;
+    background-color: darkorange;
+    box-shadow: black;
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+table, th, td {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 100px;
+    border-width: 5px;
+}

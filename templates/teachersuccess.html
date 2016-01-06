@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "still.css" %}" />
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
+<table>
+<thead>
+<th>Teachers</th>
+
+</thead>
+<tr>
 {% for st in teacher %}
-    <li>{{st}}</li>
+    <td>{{st}}</td>
+    </tr>
 {% endfor %}
 </body>
 </html>
